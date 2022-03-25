@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>개인 페이지</title>
+
+    <link rel="stylesheet" href="../assets/css/fonts.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+
+    <style>
+        .mypage__wrap {
+            margin-top: 80px;
+            display: grid;
+            display: grid;
+            grid-template-areas: 
+                "mypage__info mypage__custom"
+                "mypage__setting mypage__write"
+            ;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 500px 500px; /* 임시 */
+            grid-column-gap: 50px;
+            grid-row-gap: 50px;
+            margin-bottom: 80px;
+        }
+        .mypage__box {
+            box-sizing: border-box;
+            border-radius: 50px;
+            background: #DBFAFC;
+            transition: all 0.3s;
+        }
+        .mypage__box:hover {
+            box-shadow: inset 0 0 0 10px #00C6AE;
+        }
+        .mypage__doc {
+            margin: 40px 30px 30px 30px;
+        }
+        .mypage__info__header {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .mypage__info__header a {
+            float: right;
+            background: #00C6AE;
+            padding: 7px 10px 5px 10px;
+            border-radius: 50px;
+            color: #fff;
+            /* height: 20px; */
+            line-height: 20px;
+            transition: all 0.3s;
+        }
+        .mypage__info__header a:hover {
+            background: #009786;
+        }
+        .mypage__info__body {
+            margin-top: 10px;
+            width: 100%;
+            height: 240px;
+            border: 1px solid #000;
+            position: relative;  
+        }
+        .mypage__info__body .background {
+            width: 100%;
+            height: 100%;
+            background-image: url(../assets/img/background/SAM_0062.JPG);
+            background-size: cover;
+            filter: opacity(80%)
+        }
+        .mypage__info__body .img {
+            width: 180px;
+            height: 180px;
+            background: #62db72;
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            top: calc(50% - 10px);
+            transform: translate(-50%, -50%);
+        }
+        .mypage__info__body .intro {
+            position: absolute;
+            left: 50%;
+            bottom: 10px;
+            transform: translateX(-50%);
+            font-size: 14px;
+            color: #fff;
+            font-weight: 700;
+        }
+        .mypage__info__footer {
+            margin-top: 10px;
+            background: #fff;
+        }
+        .mypage__info__footer table {
+            width: 100%;
+        }
+        .mypage__info__footer th,
+        .mypage__info__footer td {
+            border: 1px solid #000;
+            font-size: 16px;
+            text-align: center;
+            vertical-align: middle;
+            padding: 8px;
+        }
+        .mypage__info__footer tbody th {
+            text-align: left;
+        }
+        
+    </style>
+</head>
+<body>
+    <header id="header">
+        <div class="header container">
+            <h1 class="logo"><a href="#">남자다움</a></h1>
+            <nav class="menu">
+                <h2 class="ir_so">메인 메뉴</h2>
+                <ul>
+                    <li><a href="#">개인</a></li>
+                    <li><a href="#">리뷰</a></li>
+                    <li><a href="#">꿀팁</a></li>
+                    <li><a href="#">고민</a></li>
+                </ul>
+            </nav>
+            <div class="member">
+                <span class="ir_so">회원 정보 영역</span>
+                <a href="#">회원가입</a>
+                <span>/</span>
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="mypage">
+            <div class="box100" aria-hidden="true"></div>
+            <h2 class="ir_so">개인페이지 영역</h2>
+            <div class="mypage__wrap container">
+                <div class="mypage__info mypage__box">
+                    <div class="mypage__doc">
+                        <div class="mypage__info__header">
+                            ※ 회원정보
+                            <a href="#">수정</a> 
+                        </div>
+                        <div class="mypage__info__body">
+                            <!-- <div class="mypage__img"></div> -->
+                            <div class="background"></div>
+                            <img class="img" src="../assets/img/face/img01.jpg" alt="">
+                            <div class="intro">당신의 자기소개을 넣어주세요!</div>
+                        </div>
+                        <div class="mypage__info__footer">
+                            <table>
+                                <colgroup>
+                                    <col style="width: 12%">
+                                    <col style="width: 22%">
+                                    <col style="width: 18%">
+                                    <col style="width: 48%">
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>목록</th>     
+                                        <th>내용</th>
+                                        <th>목록</th>     
+                                        <th>내용</th>     
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th>ID</th>
+                                        <td>qhd1994</td>
+                                        <th>Email</th>
+                                        <td>qhd1994@naver.com</td>
+                                    </tr>
+                                    <tr>
+                                        <th>이름</th>
+                                        <td>유희봉</td>
+                                        <th>생년월일</th>
+                                        <td>1994-07-28</td>
+                                    </tr>
+                                    <tr>
+                                        <th>성별</th>
+                                        <td>남자</td>
+                                        <th>휴대전화</th>
+                                        <td>010-7579-0168</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="mypage__custom mypage__box">
+                    <div class="mypage__header">맞춤정보</div>
+                </div>
+                <div class="mypage__setting mypage__box">
+                    <div class="mypage__header">알림</div>
+                </div>
+                <div class="mypage__write mypage__box">
+                    <div class="mypage__header">게시글/댓글 관리</div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
